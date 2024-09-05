@@ -21,14 +21,6 @@
         <link rel="stylesheet" href="css/style.css"/>
         <link rel="stylesheet" href="css/responsive.css"/>
         <link rel="stylesheet" href="demos/real-estate/real-estate.css" />
-
-        <style>
-            .backdrop-new{
-                background-color: rgb(0 0 0 / 36%);
-                height: 100%;
-                width: 100%;
-            }
-        </style>
     </head>
     <body data-mobile-nav-style="classic">
         <!-- start header -->
@@ -233,339 +225,61 @@
             <!-- end navigation -->
         </header>
         <!-- end header -->
-        <!-- start banner slider -->
-        <section class="p-0 top-space-margin">
-            <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 " data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": "false"}' data-number-pagination="1">
-                <div class="swiper-wrapper">
-                    <!-- start slider item -->
-                    <div class="swiper-slide cover-background" style="background-image:url('images/slide1.jpg');"> 
-                        <div class="backdrop-new">
-                            <canvas id="myCanvas" class="ull-screen md-h-600px sm-h-500px"></canvas>
-                            <div class="car" id="car"></div>
-                        </div>
-                        
-                    </div>
-                    <!-- end slider item -->
-                    <!-- start slider item -->
-                    <!-- <div class="swiper-slide cover-background" style="background-image:url('https://via.placeholder.com/1920x1080');"> 
-                        <div class="container h-100">
-                            <div class="row align-items-center h-100">
-                                <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                    <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                    <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Woodland <span class="fw-700">modern</span></div>  
-                                    <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Schedule visit</a>
-                                    <a href="#" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">View details</a>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <div class="row">
-                                <div class="col-xl-7 lg-mb-25px">
-                                    <div class="row">
-                                        <div class="col text-center border-end border-color-extra-medium-gray">
-                                            <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                            <span class="alt-font fs-16 fw-500 d-block">4 Beds</span>
-                                        </div>
-                                        <div class="col text-center border-end border-color-extra-medium-gray">
-                                            <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                            <span class="alt-font fs-16 fw-500 d-block">3 Baths</span>
-                                        </div>
-                                        <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                            <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                            <span class="alt-font fs-16 fw-500 d-block">3 Parking</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                    <span class="fw-500 mb-5px d-block alt-font">For sell price</span>
-                                    <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$27,99,000</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- end slider item -->
-                    <!-- start slider item -->
-                    <!-- <div class="swiper-slide cover-background" style="background-image:url('https://via.placeholder.com/1920x939');"> 
-                        <div class="container h-100">
-                            <div class="row align-items-center h-100">
-                                <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                    <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                    <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-70 xs-w-100 ls-minus-2px">Saturate <span class="fw-700">house</span></div>  
-                                    <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Schedule visit</a>
-                                    <a href="#" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">View details</a>
-                                </div>
-                            </div> 
-                        </div>
-                        <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                            <div class="row">
-                                <div class="col-xl-7 lg-mb-25px">
-                                    <div class="row">
-                                        <div class="col text-center border-end border-color-extra-medium-gray">
-                                            <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                            <span class="alt-font fs-16 fw-500 d-block">3 Beds</span>
-                                        </div>
-                                        <div class="col text-center border-end border-color-extra-medium-gray">
-                                            <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                            <span class="alt-font fs-16 fw-500 d-block">3 Baths</span>
-                                        </div>
-                                        <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                            <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                            <span class="alt-font fs-16 fw-500 d-block">2 Parking</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                    <span class="fw-500 mb-5px d-block alt-font">For sell price</span>
-                                    <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$23,99,000</h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <!-- end slider item -->
-                </div>
-                <!-- start slider pagination --> 
-                <div class="container">
-                    <div class="row g-0">
-                        <div class="col-12 position-relative">
-                            <!-- start slider pagination --> 
-                            <div class="swiper-pagination left-0 text-start swiper-pagination-clickable swiper-number fs-14 alt-font ls-05px"></div>  
-                            <!-- end slider pagination -->
-                        </div>
+       
+        <!-- start section -->
+        <section class="overflow-hidden p-0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 p-0 position-relative">
+                        <img src="https://via.placeholder.com/1920x600" alt="" class="w-100">
+                        <div class="alt-font fw-600 fs-350 lg-fs-275 md-fs-250 xs-fs-160 ls-minus-5px xs-ls-minus-2px position-absolute right-minus-50px lg-right-0px bottom-minus-80px md-bottom-minus-60px xs-bottom-minus-40px text-white text-outline text-outline-width-3px" data-bottom-top="transform: translate3d(80px, 0px, 0px);" data-top-bottom="transform: translate3d(-280px, 0px, 0px);">about us</div>
                     </div>
                 </div>
-                <!-- end slider pagination -->
-                <!-- start slider navigation -->
-                <!-- <div class="slider-one-slide-prev-1 icon-very-small text-white swiper-button-prev slider-navigation-style-06"><i class="line-icon-Arrow-OutLeft icon-extra-large"></i></div>
-                <div class="slider-one-slide-next-1 icon-very-small text-white swiper-button-next slider-navigation-style-06"><i class="line-icon-Arrow-OutRight icon-extra-large"></i></div> -->
-                <!-- end slider navigation --> 
             </div>
         </section>
-        <!-- end banner slider --> 
-        <!-- start section --> 
-        <section>
+        <!-- end section -->
+        <!-- start section -->
+        <section class="pb-0"> 
             <div class="container">
-                <div class="row align-items-center justify-content-center">
-                    <div class="col-lg-6 md-mb-50px position-relative" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"lr", "easing": "easeOutQuad", "delay":50}'>
-                        <figure class="position-relative mb-0 overflow-hidden border-radius-6px"> 
-                            <img src="https://via.placeholder.com/610x610" alt="" class="w-100"> 
+                <div class="row align-items-center">  
+                    <div class="col-lg-6 order-2 order-lg-1 position-relative " data-anime='{ "effect": "slide", "color": "#262b35", "direction":"tb", "easing": "easeOutQuad", "delay":50}'> 
+                        <figure class="position-relative m-0">
+                            <img src="https://via.placeholder.com/610x647" class="w-100" alt="">
+                            <figcaption class="w-180px bg-white p-30px pt-20px border-radius-8px position-absolute top-150px right-minus-30px lg-right-0px overflow-hidden box-shadow-medium animation-float"> 
+                                <span class="alt-font fs-100 fw-700 text-white d-block position-relative z-index-1">15</span>
+                                <div class="alt-font fw-500 fs-24 d-block text-dark-gray lh-26 ls-minus-05px">Years of <span class="fw-700">experience.</span></div>
+                                <div class="h-150px w-150px border-radius-100 bg-base-color position-absolute left-minus-10px top-minus-50px z-index-0"></div>
+                            </figcaption>
                         </figure>
                     </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6" data-anime='{ "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                        <!-- <span class="fs-20 d-inline-block mb-15px text-base-color">About us</span>  -->
-                        <h2 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none sm-w-85" data-shadow-animation="true" data-animation-delay="700">About <span class="fw-700 text-highlight">Us<span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span></span></h2> 
-                        <p class="w-80 md-w-100">Online property marketplace to buy, sell, and rent residential and commercial properties. Used by millions of renters to find property.</p>
-                        <p class="w-80 md-w-100">We are committed to providing clients with peerless consultancy services
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 mb-8 order-1 order-lg-2 md-mb-40px" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'> 
+                        
+                        <h2 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">About Us</h2> 
+                        <p class="w-100 lg-w-100">At URVISA, we believe in building relationships that deliver desired results and
+                            become trusted partners to our clients to build legacies for generations to
+                            come through.</p>
+                        <p class="w-100 lg-w-100">We are committed to providing clients with peerless consultancy services
                             based on best engineering practices & procedures, high professional ethics,
                             Integrity, and a wealth of experience gained from projects across all industry
                             sectors through our expert business consortiums. </p>
+                        <p class="w-100 lg-w-100">We are a team of experienced Construction Professionals like Designers,
+                            Engineers, Consultants, and Construction managers motivated by a common
+                            purpose to deliver the highest levels of quality and proficiency in work,
+                            sustainable design, engineering, and consultancy solutions to build a better
+                            world, and assets. </p>
+                        <p class="w-100 lg-w-100">We can meet client requirements such as digitalization, addressing issues like
+                            urbanization, climate change, and probable unforeseeable events. We make
+                            sure that our consultation services are customized to the individual needs of a
+                            project. </p>
                         
-                        <div class="d-inline-block">
-                            <a href="#" class="btn btn-dark-gray btn-medium btn-round-edge me-25px">About company</a> 
-                            <!-- <a href="#" class="btn btn-large btn-link btn-hover-animation-switch text-dark-gray p-0">
-                                <span>
-                                    <span class="btn-text">Find property</span>
-                                    <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                                    <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                                </span> 
-                            </a> -->
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </section>
-        <!-- end section -->
-        <!-- start section -->
-        <section class="p-0 border-top border-bottom border-color-extra-medium-gray">
-            <div class="container">
-                <marquee>
-                <div class="row row-cols-1 row-cols-lg-6 row-cols-md-3 row-cols-sm-2 justify-content-center g-0 bg-white" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-04 border-end md-border-bottom sm-border-end-0 border-color-extra-medium-gray position-relative">
-                        <div class="feature-box pt-45px pb-25px">
-                            <div class="feature-box-icon mb-10px">
-                                <div class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute left-18px top-18px ps-10px pe-10px">20K</div>
-                                <a href="#" class="d-block">
-                                    <img src="images/demo-real-estate-icon-apartment.svg" alt="">
-                                </a>
-                            </div>
-                            
-                        </div>  
-                    </div>
-                    <!-- end features box item -->
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-04 border-end md-border-bottom sm-border-end-0 border-color-extra-medium-gray position-relative">
-                        <div class="feature-box pt-45px pb-25px">
-                            <div class="feature-box-icon mb-10px">
-                                <div class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute left-18px top-18px ps-10px pe-10px">20K</div>
-                                <a href="#" class="d-block">
-                                    <img src="images/demo-real-estate-icon-apartment.svg" alt="">
-                                </a>
-                            </div>
-                            
-                        </div>  
-                    </div>
-                    <!-- end features box item -->
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-04 border-end md-border-bottom xs-border-end-0 border-color-extra-medium-gray position-relative">
-                        <div class="feature-box pt-45px pb-25px">
-                            <div class="feature-box-icon mb-10px">
-                                <div class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute left-18px top-18px ps-10px pe-10px">18K</div>
-                                <a href="#" class="d-block">
-                                    <img src="images/demo-real-estate-icon-condominium.svg" alt="">
-                                </a>
-                            </div>
-                            
-                        </div>  
-                    </div>
-                    <!-- end features box item -->
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-04 border-end md-border-start sm-border-end-0 sm-border-start-0 sm-border-bottom border-color-extra-medium-gray position-relative">
-                        <div class="feature-box pt-45px pb-25px">
-                            <div class="feature-box-icon mb-10px">
-                                <div class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute left-18px top-18px ps-10px pe-10px">22K</div>
-                                <a href="#" class="d-block">
-                                    <img src="images/demo-real-estate-icon-home.svg" alt="">
-                                </a>
-                            </div>
-                           
-                        </div>  
-                    </div>
-                    <!-- end features box item -->
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-04 border-end xs-border-end-0 xs-border-bottom border-color-extra-medium-gray position-relative">
-                        <div class="feature-box pt-45px pb-25px">
-                            <div class="feature-box-icon mb-10px">
-                                <div class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute left-18px top-18px ps-10px pe-10px">09K</div>
-                                <a href="#" class="d-block">
-                                    <img src="images/demo-real-estate-icon-office.svg" alt="">
-                                </a>
-                            </div>
-                           
-                        </div>  
-                    </div>
-                    <!-- end features box item -->
-                    <!-- start features box item -->
-                    <div class="col icon-with-text-style-04 border-color-extra-medium-gray md-border-end sm-border-end-0 position-relative">
-                        <div class="feature-box pt-45px pb-25px">
-                            <div class="feature-box-icon mb-10px">
-                                <div class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute left-18px top-18px ps-10px pe-10px">20K</div>
-                                <a href="#" class="d-block">
-                                    <img src="images/demo-real-estate-icon-shop.svg" alt="">
-                                </a>
-                            </div>
-                            
-                        </div>  
-                    </div>
-                    <!-- end features box item -->
-                </div>
-                </marquee>
-            </div>
-        </section>
-        <!-- end section -->
-        <!-- start section -->
-        <section style="">
-            <div class="container">
-                <div class="row align-items-center justify-content-center mb-7"> 
-                    <div class="col-lg-5 md-mb-50px" data-anime='{ "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                        
-                        <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Mission, Vision & Values</h3> 
-                        <div class="mt-50px mb-50px sm-mt-40px sm-mb-40px">
-                            <!-- start features box item -->
-                            <div class="icon-with-text-style-08 mb-30px">
-                                <div class="feature-box feature-box-left-icon overflow-hidden">
-                                    <div class="feature-box-icon">
-                                        <img src="https://via.placeholder.com/80x80" class="w-80px" alt="">
-                                    </div>
-                                    <div class="feature-box-content last-paragraph-no-margin">
-                                        <span class="text-dark-gray fs-19 alt-font mb-5px fw-600 d-block">Our Vision</span>
-                                        <p class="">To be the most Intuitive platform of Specialized Professionals collaborating for a better world, build assets and service to clients.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end features box item -->
-                            <!-- start features box item -->
-                            <div class="icon-with-text-style-08">
-                                <div class="feature-box feature-box-left-icon overflow-hidden">
-                                    <div class="feature-box-icon">
-                                        <img src="https://via.placeholder.com/80x80" class="w-80px" alt="">
-                                    </div>
-                                    <div class="feature-box-content last-paragraph-no-margin">
-                                        <span class="text-dark-gray fs-19 alt-font mb-5px fw-600 d-block">Our Mission</span>
-                                        <p class="">Having expert professionals on board seamlessly who add value to our clients
-                                            and projects. Persistently achieving the Hallmark of Integrity and Proficiency.
-                                             </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end features box item -->
-                        </div>
-                        <div class="d-inline-block">
-                            <a href="#" class="btn btn-dark-gray btn-medium btn-round-edge me-15px xs-mb-10px">read more</a> 
-                        </div>
-                    </div> 
-                    <div class="col-lg-6 offset-lg-1 position-relative" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"lr", "easing": "easeOutQuad", "delay":50}'>
-                        <!-- start popup video -->
-                        <figure class="position-relative mb-0 border-radius-6px overflow-hidden"> 
-                            <img src="https://via.placeholder.com/800x786" class="w-100 border-radius-6px" alt="">
-                            <a href="https://www.youtube.com/watch?v=cfXHhfNy7tU" class="absolute-middle-center text-center rounded-circle video-icon-box video-icon-large popup-vimeo">
-                                
-                            </a>
-                            <figcaption class="position-absolute text-center border-radius-5px right-25px bottom-25px ps-30px pe-30px blur-box bg-white-transparent">
-                                <h1 class="mx-auto mb-0 fw-700 alt-font text-dark-gray mb-5px mt-25px">4.9</h1>
-                                <div class="text-base-color fs-19 ls-2px lh-10">
-                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                                </div>
-                                <span class="text-dark-gray text-uppercase fs-13 fw-700 alt-font mb-15px d-inline-block">TrustScore</span>
-                            </figcaption>
-                        </figure>
-                        <!-- end popup video -->
                     </div>
                 </div>
-                
             </div>
         </section>
         <!-- end section -->
         
-        <!-- start section -->
-        <section class="bg-gradient-very-light-gray">
-            <div class="container">
-                <div class="row mb-3">
-                    <div class="col-6 text-left" data-anime='{ "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Our <span class="fw-700 text-highlight d-inline-block">Services<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
-                        <p>
-                            We provide consultancy services on a wide range of projects across all industry sectors with a team of highly-skilled, dedicated and collaborative professionals, delivering exceptional service, independent advice, value for money, and project success.
-                        </p>
-                        <p>
-                            We specialize in below key areas, tailoring our services to your project, and enabling your project team to make informed and effective decisions.
-                        </p>
-                        <ul class="list-style-04 text-dark-gray fw-500" style="">
-                            <li>Building and Industrial Audits</li>
-                            <li>BIM: Building Information Modeling</li>
-                            <li>Point Cloud - Scan to BIM for Reality Capture</li>
-                            <li>GIS: Geographic Information System</li> 
-                        </ul>
-                        <div class="d-inline-block">
-                            <a href="#" class="btn btn-dark-gray btn-medium btn-round-edge me-15px xs-mb-10px">read more</a> 
-                        </div>
-                    </div>
-                    <div class="col-6 position-relative md-mb-50px">
-                        <div class="text-end w-80 md-w-75 ms-auto skrollable shadow-in skrollable-between" data-animation-delay="500" data-shadow-animation="true" data-bottom-top="transform: translateY(50px)" data-top-bottom="transform: translateY(-50px)" style="transform: translateY(26.2335px);">
-                            <img src="images/demo-business-company-02.jpg" alt="" class="border-radius-5px" data-no-retina="">
-                        </div>
-                        <div class="w-60 md-w-50 xs-w-55 overflow-hidden position-absolute left-15px bottom-minus-50px skrollable shadow-in skrollable-between" data-shadow-animation="true" data-animation-delay="500" data-bottom-top="transform: translateY(-50px)" data-top-bottom="transform: translateY(50px)" style="transform: translateY(-47.792px);">
-                            <img src="images/demo-business-company-01.jpg" alt="" class="border-radius-5px box-shadow-quadruple-large" data-no-retina="">
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </section>
-        <!-- end section -->
-
-        
-        
-        <!-- start footer -->
-        <footer class="footer-light bg-gradient-very-light-gray pb-0 mt-9">
+         <!-- start footer -->
+         <footer class="footer-light bg-gradient-very-light-gray pb-0 mt-9">
             <div class="container position-relative pt-3 pb-3 overlap-section md-mb-15px">
                 <div class="position-absolute left-0px top-0px background-no-repeat background-size-100 h-100 w-100 animation-float" style="background-image: url('images/demo-real-estate-10.png')"></div>
                 <!-- start newsletter -->
@@ -668,34 +382,6 @@
             </div> 
         </footer>
         <!-- end footer -->
-        <!-- start subscription popup -->
-        <!-- <div id="subscribe-popup" class="mfp-hide subscribe-popup">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-10 col-md-10 bg-white">
-                        <div class="row position-relative box-shadow-quadruple-large">
-                            <div class="col-lg-6 cover-background md-h-400px xs-h-300px" style="background-image:url('https://via.placeholder.com/600x690');"></div>
-                            <div class="col-lg-6 newsletter-popup p-8 lg-p-5 md-p-6 xs-p-8 position-relative">
-                                <span class="text-base-color mb-10px d-block" style="">We offer a wide range of options</span>
-                                <h4 class="d-inline-block alt-font text-dark-gray mb-20px">1M+ property ready to <span class="fw-700 d-inline-flex text-highlight">buying & selling.<span class="bg-base-color h-10px bottom-8px opacity-3"></span></span></span></h4>
-                                <p>Subscribe to our newsletters and get the property for sell and rent updates.</p>
-                                <div class="d-inline-block w-100 newsletter-style-05 position-relative mb-20px">
-                                    <form action="email-templates/subscribe-newsletter.php" method="post">
-                                        <input class="input-medium w-100 border-radius-4px form-control required mb-15px" type="email" name="email" placeholder="Enter your email address" />
-                                        <input type="hidden" name="redirect" value="">
-                                        <button type="submit" aria-label="submit" class="btn btn-medium btn-round-edge btn-dark-gray btn-box-shadow w-100 submit">Subscribe now!</button>
-                                        <div class="form-results border-radius-4px mt-10px lh-normal pt-10px pb-10px ps-15px pe-15px fs-16 w-100 text-center position-absolute z-index-1 d-none"></div>
-                                    </form>
-                                </div>
-                                <label for="newsletter-off" class="fs-15"><input class="w-auto me-10px position-relative top-1px p-0" type="checkbox" id="newsletter-off" name="newsletter-off">Don't show this popup again</label>
-                            </div>
-                            <button title="Close (Esc)" type="button" class="mfp-close text-dark-gray"></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- end subscription popup -->
         <!-- start scroll progress -->
         <div class="scroll-progress d-none d-xxl-block">
             <a href="#" class="scroll-top" aria-label="scroll">
@@ -707,7 +393,5 @@
         <script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript" src="js/vendors.min.js"></script>
         <script type="text/javascript" src="js/main.js"></script>
-
-        <script type="text/javascript" src="js/service-animation.js"></script>
     </body>
 </html>
